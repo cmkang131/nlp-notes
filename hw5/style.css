@@ -142,7 +142,7 @@ details.dx-ans[open] summary{border-bottom-color:#d9ecd4;background:#e9f5e4}
 details.dx .dx-body{padding:16px 22px;background:#fff}
 details.dx .dx-body section.part{border-top:none;padding:8px 0}
 .dx-pair:has(> details.dx-hint[open]) > details.dx-ans .dx-dup{display:none}
-@media print{details.dx>:not(summary){display:block!important}}
+@media print{details.dx summary{display:none!important} details.dx{border:none!important;box-shadow:none!important} details.dx .dx-body{padding:2px 0!important} .to-home{display:none}}
 /* numbered solution steps (exam/worked solutions) */
 .body.notes ol.steps{list-style:none;counter-reset:st;margin:8px 0;padding-left:0}
 .body.notes ol.steps>li{counter-increment:st;position:relative;padding:3px 4px 3px 78px;margin:.5em 0;line-height:1.65}
