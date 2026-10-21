@@ -1,0 +1,18 @@
+/* reveal buttons (2026-10-21 rule: problem first, hint/answer behind native details) */
+details.reveal{margin:14px 0;border:1.5px solid var(--rule);background:#fff}
+details.reveal>summary{list-style:none;cursor:pointer;padding:11px 16px;font-weight:700;font-size:15.5px;display:flex;align-items:center;gap:9px;user-select:none}
+details.reveal>summary::-webkit-details-marker{display:none}
+details.reveal>summary::before{content:"▸";color:var(--gray);font-size:13px;transition:transform .15s}
+details.reveal[open]>summary::before{transform:rotate(90deg)}
+details.reveal.hint>summary{color:var(--blue)}
+details.reveal.hint>summary::after{content:"개념 정리만";margin-left:auto;font-weight:400;font-size:12.5px;color:var(--gray)}
+details.reveal.answer>summary{color:var(--red)}
+details.reveal.answer>summary::after{content:"개념 + 풀이 + 한 줄 정리";margin-left:auto;font-weight:400;font-size:12.5px;color:var(--gray)}
+details.reveal>.reveal-body{padding:6px 22px 18px;border-top:1px solid #ddd}
+details.reveal>.reveal-body>.solution{margin-top:18px}
+@media print{
+  details.reveal>summary{display:none}
+  details.reveal{border:none;margin:0}
+  details.reveal:not([open])>*:not(summary){display:block !important}
+  details.reveal::details-content{display:block;content-visibility:visible !important}
+}
